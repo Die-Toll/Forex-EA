@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="navbar-section">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Animated Logo -->
+                <a class="navbar-brand" href="#">
+                    <span>D</span><span>i</span><span>e </span>&nbsp;
+                    <span>T</span><span>O</span><span>L</span><span>L</span>
+                </a>
+
+                <!-- Navbar Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links + Buttons Inside -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Our Projects">Our Projects</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Our Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="#">Service 1</a></li>
+                                <li><a class="dropdown-item" href="#">Service 2</a></li>
+                                <li><a class="dropdown-item" href="#">Service 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Us</a>
+                        </li>
+
+                        <!-- Membership & Login Buttons Moved Inside -->
+                        <li class="nav-item-btn1">
+                            <a href="#" class="btn btn-primary membership-btn" onclick="openPopup()">Membership</a>
+                        </li>
+                        <li class="nav-item-btn2">
+                            <a href="#" class="btn login-button" onclick="openPopup()">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Panda popup --><!-- Login Pop-up -->
+    <section class="panda-popup">
+        <div id="loginPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h2>Login</h2>
+                <form>
+                    <!-- Label and input field for username -->
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Username here..." /><br>
+
+                    <!-- Label and input field for password -->
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Password here..." /><br>
+
+                    <!-- Login button -->
+                    <button>Login</button>
+                </form>
+                <!-- Panda Ears -->
+                <div class="ear-l"></div> <!-- Left ear -->
+                <div class="ear-r"></div> <!-- Right ear -->
+
+                <!-- Panda Face -->
+                <div class="panda-face">
+                    <!-- Blush (cheeks) for a cute effect -->
+                    <div class="blush-l"></div> <!-- Left blush -->
+                    <div class="blush-r"></div> <!-- Right blush -->
+
+                    <!-- Eyes -->
+                    <div class="eye-l">
+                        <div class="eyeball-l"></div> <!-- Left eyeball -->
+                    </div>
+                    <div class="eye-r">
+                        <div class="eyeball-r"></div> <!-- Right eyeball -->
+                    </div>
+
+                    <!-- Panda Nose -->
+                    <div class="nose"></div>
+
+                    <!-- Panda Mouth -->
+                    <div class="mouth"></div>
+                </div>
+
+                <!-- Panda Hands (Animated to cover eyes when password is focused) -->
+                <div class="hand-l"></div> <!-- Left hand -->
+                <div class="hand-r"></div> <!-- Right hand -->
+
+                <!-- Panda Paws (For decoration at the bottom) -->
+                <div class="paw-l"></div> <!-- Left paw -->
+                <div class="paw-r"></div> <!-- Right paw -->
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background-image: url('img/3.jpg'); background-size: cover; background-position: center; height: 100vh;">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+    
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-caption text-white">
+                        <h1>Automate Your Trading with Our Proven Forex EAs</h1>
+                        <p>Maximize profits, minimize risk, and trade smarter with our expert advisors.</p>
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption text-white">
+                        <h1>Boost Your Trading Performance</h1>
+                        <p>Backtested and optimized EAs designed for consistent results.</p>
+                        <a href="#" class="btn btn-primary">Try for Free</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption text-white">
+                        <h1>Secure & Reliable Forex Automation</h1>
+                        <p>Partnered with regulated brokers for secure and transparent trading.</p>
+                        <a href="#" class="btn btn-primary">Download Now</a>
+                    </div>
+                </div>
+            </div>
+    
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+    
+
+        <div class="whatsapp-container">
+            <a href="https://wa.me/+12032857242" class="whatsapp-icon" target="_blank">
+                <img src="img/WhatsApp.png" alt="WhatsApp">
+            </a>
+        </div>
+    </section>
+
+    <section class="forex-products text-black py-5" id="Our Projects">
+        <div class="container py-5">
+            <h2 class="text-center text-white mb-4">Our Forex EAs</h2>
+            <div class="row g-4">
+
+                <!-- Basic EA -->
+                <div class="col-md-4">
+                    <div class="product-card p-3 text-center">
+                        <img src="img/c.png" class="img-fluid" alt="Basic EA">
+                        <h3 class="mt-3">Basic EA</h3>
+                        <p>Perfect for beginners looking to automate their trades with a simple yet effective strategy.
+                        </p>
+                        <ul class="list-unstyled text-start">
+                            <li>✔️ Automated Trading Strategy</li>
+                            <li>✔️ Risk Management Features</li>
+                            <li>✔️ Works with Major Forex Pairs</li>
+                        </ul>
+                        <h4>$100 - One-Time Purchase</h4>
+                        <p class="text-muted">Includes a 1-month Free Trial</p>
+                        <a href="#" class="btn btn-primary w-100">Get Basic EA</a>
+                    </div>
+                </div>
+
+                <!-- Intermediate EA -->
+                <div class="col-md-4">
+                    <div class="product-card p-3 text-center">
+                        <img src="img/c.png" class="img-fluid" alt="Intermediate EA">
+                        <h3 class="mt-3">Intermediate EA</h3>
+                        <p>For experienced traders who need a more dynamic and adaptive trading system.</p>
+                        <ul class="list-unstyled text-start">
+                            <li>✔️ Advanced Risk Control</li>
+                            <li>✔️ News Filter Integration</li>
+                            <li>✔️ Optimized for Higher ROI</li>
+                        </ul>
+                        <h4>$200 - Subscription Model</h4>
+                        <p class="text-muted">Includes a 1-month Free Trial</p>
+                        <a href="#" class="btn btn-primary w-100">Get Intermediate EA</a>
+                    </div>
+                </div>
+
+                <!-- Expert EA -->
+                <div class="col-md-4">
+                    <div class="product-card p-3 text-center">
+                        <img src="img/c.png" class="img-fluid" alt="Expert EA">
+                        <h3 class="mt-3">Expert EA</h3>
+                        <p>Professional-grade EA for high-frequency trading and AI-powered decision making.</p>
+                        <ul class="list-unstyled text-start">
+                            <li>✔️ AI & Machine Learning</li>
+                            <li>✔️ Hedge & Scalping Strategies</li>
+                            <li>✔️ Real-Time Market Adaptation</li>
+                        </ul>
+                        <h4>$300 - One-Time Purchase</h4>
+                        <p class="text-muted">Includes a 1-month Free Trial</p>
+                        <a href="#" class="btn btn-primary w-100">Get Expert EA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Us -->
+                <div class="col-md-4">
+                    <h2>Contact Us</h2>
+                    <p>We’d love to hear from you! Reach out to us through the form below.</p>
+
+                    <form>
+                        <!-- Name Field -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                            <label for="name">Your Name</label>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                            <label for="email">Your Email</label>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" placeholder="Your Message"
+                                style="height: 150px;"></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Get in Touch -->
+                <div class="col-md-4">
+                    <h2>Get in Touch</h2>
+                    <p class="contact-info"><strong>Email:</strong> support@example.com</p>
+                    <p class="contact-info"><strong>Phone:</strong> +123 456 7890</p>
+
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="col-md-4">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    How do I contact support?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">You can reach out via our contact form, email, or phone.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    What is your response time?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">We aim to respond within 24 hours.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    Do you offer 24/7 support?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, our support team is available 24/7 to assist you.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Will work later  -->
+
+    <!-- <section class="chart-body">
+        <div class="chart-container">
+            <h2 style="text-align:center;">Live Forex Chart</h2>
+            <div class="tradingview-widget-container">
+                <div id="tradingview_chart" class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright">
+                    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                        <span class="blue-text">Track all markets on TradingView</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+       
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async></script>
+    
+        <script type="text/javascript">
+            window.addEventListener("DOMContentLoaded", function () {
+                new TradingView.widget({
+                    "container_id": "tradingview_chart",
+                    "autosize": true,
+                    "symbol": "OANDA:GBPUSD",
+                    "interval": "240",
+                    "timezone": "Etc/UTC",
+                    "theme": "dark",
+                    "style": "1",  
+                    "locale": "en",
+                    "enable_publishing": false,
+                    "withdateranges": true,
+                    "hide_side_toolbar": false,
+                    "hide_top_toolbar": false,
+                    "allow_symbol_change": false,
+                    "save_image": false,
+                    "studies": ["STD;Volume"], 
+                    "support_host": "https://www.tradingview.com"
+                });
+            });
+        </script>
+    </section> -->
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
