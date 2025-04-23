@@ -1,0 +1,4 @@
+@font-face {
+    font-family: 'Showcard Gothic';
+    src: url('fonts/showcard-gothic.ttf') format('truetype'); /* Added fonts/ folder path */
+}

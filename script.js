@@ -162,13 +162,15 @@ document.addEventListener("click", (e) => {
   }
 });
 
-document.querySelector("#login-btn").addEventListener("click", function () {
-    document.querySelector(".popup").classList.add("active");
-    document.body.classList.add("noscroll"); // Disable scrolling
+// Change this in script.js (line 165):
+document.querySelector(".login-btn").addEventListener("click", function () { // Changed #login-btn to .login-btn
+  document.querySelector(".popup").classList.add("active");
+  document.body.classList.add("noscroll");
 });
 
-document.querySelector(".close-popup").addEventListener("click", function () {
-    document.querySelector(".popup").classList.remove("active");
-    document.body.classList.remove("noscroll"); // Enable scrolling
+// And this (line 170):
+document.querySelector(".close-btn").addEventListener("click", function () { // Changed .close-popup to .close-btn
+  document.querySelector(".popup").classList.remove("active");
+  document.body.classList.remove("noscroll");
 });
 
